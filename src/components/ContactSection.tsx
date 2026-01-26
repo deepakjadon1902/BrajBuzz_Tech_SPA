@@ -3,9 +3,8 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
 
 const contactInfo = {
   company: "BrajBuzz Tech",
-  address: "123 Tech Hub, Innovation Street, Mathura, UP 281001, India",
-  phone: "+91 98765 43210",
-  email: "hello@brajbuzztech.com",
+  address: "123 Tech Hub, Innovation Street, Mathura, UP 281001, USA",
+  email: "brajbuzztech@gmail.com",
   hours: "Mon - Fri: 9:00 AM - 6:00 PM IST",
 };
 
