@@ -47,7 +47,7 @@ export const ContactSection = () => {
     if (validateForm()) {
       // Construct WhatsApp message
       const whatsappNumber = "919634359003"; // +91 9634359003
-      const whatsappMessage = `*New Contact Form Submission*
+      const whatsappMessage = `*New Contact Form Submission - BrajBuzz Tech*
 
 *Name:* ${formData.name}
 *Email:* ${formData.email}
