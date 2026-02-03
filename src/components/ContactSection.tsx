@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { MapPin, Mail, Clock, Send, CheckCircle } from "lucide-react";
 
 const contactInfo = {
   company: "BrajBuzz Tech",
-  address: "123 Tech Hub, Innovation Street, Mathura, UP 281001, USA",
-  email: "brajbuzztech@gmail.com",
+  address: "Chicago, USA",
+  email: "collaboration@brajbuzztech.com",
   hours: "Mon - Fri: 9:00 AM - 6:00 PM IST",
 };
 
@@ -45,7 +45,26 @@ export const ContactSection = () => {
     e.preventDefault();
 
     if (validateForm()) {
-      // Simulate form submission
+      // Construct WhatsApp message
+      const whatsappNumber = "919634359003"; // +91 9634359003
+      const whatsappMessage = `*New Contact Form Submission*
+
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+${formData.phone ? `*Phone:* ${formData.phone}` : ""}
+*Subject:* ${formData.subject}
+
+*Message:*
+${formData.message}`;
+
+      // Encode message for URL
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      
+      // Open WhatsApp with the message
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      window.open(whatsappURL, '_blank');
+
+      // Show success message
       setIsSubmitted(true);
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
 
@@ -99,21 +118,6 @@ export const ContactSection = () => {
                     <p className="text-sm text-muted-foreground">
                       {contactInfo.address}
                     </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-                    <Phone size={18} className="text-foreground" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-sm mb-1">Phone</h4>
-                    <a
-                      href={`tel:${contactInfo.phone}`}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {contactInfo.phone}
-                    </a>
                   </div>
                 </div>
 
