@@ -1,5 +1,20 @@
 const partners = [
-  { name: "Samsung", logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" },
+ {
+    name: "HP",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/300px-HP_logo_2012.svg.png",
+  },
+  {
+    name: "Xiaomi",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Xiaomi_logo.svg/300px-Xiaomi_logo.svg.png",
+  },
+  {
+    name: "Asus",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/ASUS_Logo.svg/512px-ASUS_Logo.svg.png",
+  },
+  {
+    name: "Lenovo",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lenovo_logo_2015.svg/512px-Lenovo_logo_2015.svg.png",
+  },
   { name: "Apple", logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" },
   { name: "Sony", logo: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Sony_logo.svg" },
   { name: "Google", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
@@ -7,6 +22,10 @@ const partners = [
   { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
   { name: "Intel", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg" },
   { name: "Nvidia", logo: "https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" },
+  {
+    name: "Dell",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Dell_logo_2016.svg/400px-Dell_logo_2016.svg.png",
+  },
 ];
 
 export const PartnersSection = () => {
@@ -54,7 +73,7 @@ export const PartnersSection = () => {
       {/* Mobile Grid Fallback */}
       <div className="container-custom mt-10 md:hidden">
         <div className="grid grid-cols-2 gap-6">
-          {partners.slice(0, 6).map((partner) => (
+          {partners.slice(0, 10).map((partner) => (
             <div
               key={partner.name}
               className="h-16 flex items-center justify-center grayscale opacity-60"

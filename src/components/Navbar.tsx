@@ -69,9 +69,9 @@ export const Navbar = () => {
             />
             {/* Text */}
             <div className="flex flex-col">
-              <span className="font-serif text-lg md:text-xl font-bold text-gray-900 tracking-tight leading-tight">
-                BrajBuzz
-              </span>
+              <span className="font-serif text-lg md:text-xl font-bold text-blue-600 tracking-tight leading-tight">
+  BrajBuzz
+</span>
               <span className="font-sans text-xs font-semibold text-[#FF0000] uppercase tracking-widest -mt-1">
                 Tech
               </span>
