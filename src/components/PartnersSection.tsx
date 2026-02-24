@@ -1,3 +1,5 @@
+
+
 const partners = [
  {
     name: "HP",
@@ -46,42 +48,23 @@ export const PartnersSection = () => {
         </div>
       </div>
 
-      {/* Logo Carousel */}
+      {/* Logo Carousel — all screen sizes */}
       <div className="relative">
         {/* Gradient Masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/30 to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/30 to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-secondary/30 to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-secondary/30 to-transparent z-10" />
 
         {/* Scrolling Track */}
         <div className="flex animate-scroll pause-on-hover">
-          {/* First set of logos */}
           {[...partners, ...partners].map((partner, index) => (
             <div
               key={`${partner.name}-${index}`}
-              className="flex-shrink-0 w-40 h-20 mx-8 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+              className="flex-shrink-0 w-24 md:w-40 h-16 md:h-20 mx-4 md:mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
             >
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="max-w-full max-h-10 object-contain"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Mobile Grid Fallback */}
-      <div className="container-custom mt-10 md:hidden">
-        <div className="grid grid-cols-2 gap-6">
-          {partners.slice(0, 10).map((partner) => (
-            <div
-              key={partner.name}
-              className="h-16 flex items-center justify-center grayscale opacity-60"
-            >
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="max-w-full max-h-8 object-contain"
+                className="max-w-full max-h-8 md:max-h-10 object-contain"
               />
             </div>
           ))}

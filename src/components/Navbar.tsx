@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -49,7 +50,7 @@ export const Navbar = () => {
         isScrolled ? "bg-white/90 backdrop-blur-xl border-b border-gray-200 shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a
@@ -62,17 +63,17 @@ export const Navbar = () => {
           >
             {/* Circular Logo */}
             <img 
-              src="/images/logo.png"  // Replace with your actual logo filename in public folder
+              src="/images/logo.png"
               alt="BrajBuzz Tech Logo"
               className="h-8 w-8 md:h-10 md:w-10 object-contain flex-shrink-0 rounded-full border-2 border-gray-200/50 bg-white/20 p-0.5 shadow-sm hover:shadow-md transition-shadow"
               loading="lazy"
             />
-            {/* Text */}
-            <div className="flex flex-col">
-              <span className="font-serif text-lg md:text-xl font-bold text-blue-600 tracking-tight leading-tight">
-  BrajBuzz
-</span>
-              <span className="font-sans text-xs font-semibold text-[#FF0000] uppercase tracking-widest -mt-1">
+            {/* Text — single line */}
+            <div className="flex items-center gap-1">
+              <span className="font-serif text-lg md:text-xl font-bold text-blue-600 tracking-tight leading-none">
+                BrajBuzz
+              </span>
+              <span className="font-sans text-lg md:text-xl font-bold text-[#FF0000] tracking-tight leading-none">
                 Tech
               </span>
             </div>
